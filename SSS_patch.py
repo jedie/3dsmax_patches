@@ -2,7 +2,7 @@
 
 """
     Bugfix 3dsmax MentalRay 'subsurface.mi' file
-    
+
     To apply: Start the 'SSS_patch.cmd' as admin!
 
     Written 2016 by Jens Diemer
@@ -14,6 +14,8 @@
 
 from __future__ import print_function
 
+__version__="1.1"
+
 import os
 import re
 import difflib
@@ -24,10 +26,11 @@ MI_FILEPATH = os.path.join(
     os.path.expandvars("%ProgramW6432%"),
     "Autodesk\\3ds Max 2016\\NVIDIA\\shaders_standard\\mentalray\\include\\subsurface.mi",
 )
+TRIGGER='shader "env_shader" "misss_call_shader"'
 SOURCE_RE = re.compile(
     '(?P<prefix>'
     'shader "env_shader" "misss_call_shader" \(\s*?'
-    '"shader" = interface "r\.environment")'
+    '"shader" = interface "[r|s]\.environment")'
     '(?P<suffix>\s*?\))'
 )
 REPLACE_STRING=(
@@ -37,11 +40,14 @@ REPLACE_STRING=(
 )
 
 
-def patch(filepath, source_re, replace_string, patch_count):
+def patch(filepath, trigger_string, source_re, replace_string):
     print("Patch file: %s" % filepath)
 
     with open(filepath, "r") as f:
         content = f.read()
+
+    trigger_count = content.count(trigger_string)
+    print("Found %i trigger strings: %r" % (trigger_count, trigger_string))
 
     new_content, count = source_re.subn(REPLACE_STRING, content)
     print("Patch count:", count)
@@ -51,7 +57,7 @@ def patch(filepath, source_re, replace_string, patch_count):
         print("Already patched?!?")
         return
 
-    if count!=patch_count:
+    if count!=trigger_count:
         print("WARNING: Wrong patch count!")
 
     print("="*79)
@@ -93,4 +99,4 @@ def patch(filepath, source_re, replace_string, patch_count):
 
 
 if __name__ == "__main__":
-    patch(MI_FILEPATH, SOURCE_RE, REPLACE_STRING, patch_count=2)
+    patch(MI_FILEPATH, TRIGGER, SOURCE_RE, REPLACE_STRING)
