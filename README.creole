@@ -1,2 +1,38 @@
-# 3dsmax_patches
-Bugfixe / Work-a-round for autodesk 3ds max
+== Bugfixes / Work-a-round for autodesk 3ds max
+
+Download as ZIP Archive: [[https://github.com/jedie/3dsmax_patches/archive/master.zip|master.zip]]
+
+=== MentalRay DBR service bugfix
+
+The "mental ray Satellite" windows service is not installed correctly. The user can't start it, so the DBR is not usable in max 2017.
+
+* Error known since: **04-19-2016**, see thread [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-general/max-2017-mr-drb-satellite-doesn-t-start/td-p/6281098/|max 2017: MR DRB satellite doesn't start!]]
+* Affected max versions: **2017**
+* Bugfix from Autodesk: **no**
+* patch tested with max version: **2017**
+
+Steps to apply patch:
+
+# Download as ZIP Archive: [[https://github.com/jedie/3dsmax_patches/archive/master.zip|master.zip]]
+# extract the archive somewhere
+# start {{{max2017_mr_dbr_bugfix.cmd}}} **with** admin rights
+
+
+=== SSS patch
+
+Bugfix 3dsmax MentalRay 'subsurface.mi' file, that contains errors, so that many rendering warning messages will display. This will slow down rendering via backburner massively.
+
+more info in forum thread [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-general/max-2016-backburner-renders-slower-update/td-p/5689717|backburner renders slower]]
+
+* Error known since: **06-13-2011**, see thread [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-general/sss-material-error/td-p/4208664|sss material error]]
+* Affected max versions: **2012, 2013, 2014, 2015, 2016, 2017**
+* Bugfix from Autodesk: **no**
+* patch tested with max version: **2016, 2017**
+
+Steps to apply patch:
+
+# Download as ZIP Archive: [[https://github.com/jedie/3dsmax_patches/archive/master.zip|master.zip]]
+# extract the archive somewhere
+# start {{{SSS_patch.cmd}}} **with** admin rights
+
+
