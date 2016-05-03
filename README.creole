@@ -1,10 +1,14 @@
 == Bugfixes / Work-a-round for autodesk 3ds max
 
-Download as ZIP Archive: [[https://github.com/jedie/3dsmax_patches/archive/master.zip|master.zip]]
+All sourcefiles/scripts are released under GNU GPL v3 or above, see [[https://github.com/jedie/3dsmax_patches/blob/master/LICENSE|LICENSE]] for more details.
+
+Try, fork and contribute! ;)
 
 === MentalRay DBR service bugfix
 
 The "mental ray Satellite" windows service is not installed correctly. The user can't start it, so the DBR is not usable in max 2017.
+
+Bugfix based on the [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-general/max-2017-mr-drb-satellite-doesn-t-start/m-p/6303820#M113917|solution by spacefrog]]
 
 * Error known since: **04-19-2016**, see thread [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-general/max-2017-mr-drb-satellite-doesn-t-start/td-p/6281098/|max 2017: MR DRB satellite doesn't start!]]
 * Affected max versions: **2017**
@@ -36,3 +40,8 @@ Steps to apply patch:
 # start {{{SSS_patch.cmd}}} **with** admin rights
 
 
+= donation
+
+* [[https://www.paypal.me/JensDiemer|paypal.me/JensDiemer]]
+* [[https://flattr.com/submit/auto?uid=jedie&url=https%3A%2F%2Fgithub.com%2Fjedie%2FPyLucid%2F|Flattr This!]]
+* Send [[http://www.bitcoin.org/|Bitcoins]] to [[https://blockexplorer.com/address/1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F|1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F]]
