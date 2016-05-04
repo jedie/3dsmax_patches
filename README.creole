@@ -2,6 +2,8 @@
 
 All sourcefiles/scripts are released under GNU GPL v3 or above, see [[https://github.com/jedie/3dsmax_patches/blob/master/LICENSE|LICENSE]] for more details.
 
+Maybe you are interested also the project of [[https://github.com/jedie/3dsmax_bugs/|list of annoying max bugs]] ;)
+
 Try, fork and contribute! ;)
 
 === MentalRay DBR service bugfix
