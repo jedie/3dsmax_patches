@@ -30,8 +30,13 @@ title %py_file%
 echo on
 "%python%" "%py_file%"
 @echo off
+
+call:verbose_do net start mi-raysat_3dsmax2017_64
+call:verbose_do sc config mi-raysat_3dsmax2017_64 start= auto
+
 pause
 exit
+
 
 :test_exist
     if NOT exist "%~1" (
@@ -43,4 +48,12 @@ exit
         pause
         exit 1
     )
+goto:eof
+
+
+:verbose_do
+	echo.
+	echo %*
+	%*
+	echo.
 goto:eof
