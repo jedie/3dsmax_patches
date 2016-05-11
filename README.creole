@@ -41,6 +41,17 @@ Steps to apply patch:
 # extract the archive somewhere
 # start {{{SSS_patch.cmd}}} **with** admin rights
 
+=== COM Error
+
+If you get a "COM Error" message after startup, then the **MAXComponents.dll** is not registered.
+Run the small batchfile {{{COM_Error_fix.cmd}}} as admin to fix this.
+
+* Error known since: **16-12-2015**, see thread [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-general/2016-sp2-bug-com-error/m-p/5957698|2016 SP2 Bug: COM Error]]
+* Affected max versions: **2016** (Maybe others, too.)
+* Bugfix from Autodesk: Fix if by ourself, see: [[https://knowledge.autodesk.com/support/3ds-max/troubleshooting/caas/sfdcarticles/sfdcarticles/COM-Error-CoCreateInstance-failed-please-check-you-registry-entries.html|Knowledge entry from Apr 28 2016]]
+
+* Download: [[https://github.com/jedie/3dsmax_patches/raw/master/COM_Error_fix.cmd|COM_Error_fix.cmd]]
+
 
 = donation
 
