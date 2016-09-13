@@ -6,6 +6,7 @@ Maybe you are interested also the project of [[https://github.com/jedie/3dsmax_b
 
 Try, fork and contribute! ;)
 
+
 === MentalRay DBR service bugfix
 
 The "mental ray Satellite" windows service is not installed correctly. The user can't start it, so the DBR is not usable in max 2017.
@@ -14,7 +15,7 @@ Bugfix based on the [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-gener
 
 * Error known since: **04-19-2016**, see thread [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-general/max-2017-mr-drb-satellite-doesn-t-start/td-p/6281098/|max 2017: MR DRB satellite doesn't start!]]
 * Affected max versions: **2017**
-* Bugfix from Autodesk: **no**
+* Bugfix from Autodesk: **no** logged as **MAXX-30618**
 * patch tested with max version: **2017**
 
 Steps to apply patch:
