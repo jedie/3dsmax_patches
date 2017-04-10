@@ -15,7 +15,7 @@ Bugfix based on the [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-gener
 
 * Error known since: **04-19-2016**, see thread [[http://forums.autodesk.com/t5/3ds-max-3ds-max-design-general/max-2017-mr-drb-satellite-doesn-t-start/td-p/6281098/|max 2017: MR DRB satellite doesn't start!]]
 * Affected max versions: **2017**
-* Bugfix from Autodesk: **no** logged as **MAXX-30618**
+* Bugfix from Autodesk: **no**, but [[https://forum.nvidia-arc.com/showthread.php?15585-Updating-3ds-Max-2017-for-Pascal-GPUs-%28for-Iray%29|NVIDIA with Mental Ray v3.14.1.4 update]]
 * patch tested with max version: **2017**
 
 Steps to apply patch:
